@@ -185,19 +185,6 @@ footer #rodapé{
 }
 
 
-
-/*Apagar ao terminar o desenvolvimento*/
-.testeconteudo{
-    display: flex;
-    align-self: center;
-    width: 100vh;
-    height: 100vh;
-    background-color: black;
-    margin: 20px;
-
-}
-
-
 /*Seção Jornada Profissional*/
 .JornadaProfissional {
     width: 900px;
@@ -239,16 +226,14 @@ img {
 
 /*Seção Interesses*/
 .Interesses {
-    width: 900px;
-    height: 600px;
+    width: 80vw;
+    height: 80vh;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     align-self: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    justify-content: center;     
 }
 
 .carossel {

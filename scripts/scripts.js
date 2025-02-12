@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ];
         
         const carossel = document.getElementById("carousel");
-        let interessesCurrentIndex = 3;
+        let interessesCurrentIndex = 2;
         
         function renderCards() {
             carossel.innerHTML = "";
