@@ -8,7 +8,7 @@ body {
 }
 
 header, footer {
-    width: 100vw; 
+    width: 100%; 
 }
 
 header {   
@@ -21,6 +21,7 @@ header {
     gap: 20px;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 #titulo{
@@ -31,7 +32,7 @@ header {
     padding-right: 10px;   
     color: white;    
     border-radius: 30px;
-    font-size: 30;
+    font-size: 30px;
 }
 
 header nav {
@@ -454,5 +455,35 @@ img {
 
 
 
+/*Ajustes para ficar responsivo:*/
 
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .Sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Sobre #apresentacao {
+        grid-template-columns: 1fr;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .JornadaProfissional, .Interesses {
+        width: 100%;
+        height: auto;
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
 
