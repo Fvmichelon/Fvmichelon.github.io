@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web App</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src = scripts/scripts.js></script>
+</head>
+
+<body>
+    <header>
+        <div id = "titulo">
+            <h1>Portfólio</h1> 
+        </div>        
+            <nav class = "navbar">
+                <button id = "botao-sobre" type= "button"onclick="mostrarSecao ('#Sobre')">Sobre</button>
+                <button id = "botao-interesses" type="button"onclick="mostrarSecao ('#Interesses')">Interesses</button>
+                <button id = "botao-projetos" type="button"onclick="mostrarSecao ('#Projetos')">Projetos</button>
+                <button id = "botao-jornadaAcademica" type="button"onclick="mostrarSecao ('#JornadaAcademica')">JornadaAcademica</button>
+                <button id = "botao-jornadaProfissional" type="button"onclick="mostrarSecao ('#JornadaProfissional')">JornadaProfissional</button>
+                <button id = "botao-contato" type="button"onclick= "mostrarSecao ('#Contato')"">Contato</button>
+            </nav>         
+       
+    </header>
+   
+    
+    <section id = "Abertura">
+        <div id = "texto-abertura"><h1>FRANCO PORTFÓLIO</h1></div>      
+    </section>
+    
+    <!--ideia de colocar a abertura como div antes do body, body inicia com display:none, então a abertura é mostrada e logo em seguida body é mudado para display: flex-->
+
+
+    <section id = "Menu">
+        <div class = "testeconteudo"></div>
+    </section>
+
+    <!--Se der tempo, implementar ideia do planeta 3d com as opções do portfolio orbitando ele. Usando a biblioteca three.js-->
+
+
+    <section id="Sobre">
+            <div class="Sobre">
+                <div id = "apresentacao">
+                <img src="https://picsum.photos/150/250" alt="Franco Michelon" class="foto">
+                <div class="texto">
+                    <h2>BEM-VINDO AO MEU PORTFÓLIO</h2>
+                    <p1>Me chamo Franco Michelon.</p> 
+                    <p2>Estou em busca de uma oportunidade para mudar de carreira e ingressar na área de TI. Estou disposto a me dedicar e aprender tudo o que for necessário para entregar resultados de qualidade e colaborar com a equipe em que for incluído.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+      
+
+
+    <section id="Interesses">
+        <div class = "interesses">
+            <div class="carousel" id="carousel"></div>            
+        </div>  
+    </section>
+
+
+    <section id="Projetos">
+        <div class="Projetos">
+            <h2>Meus Projetos</h2>
+            <div class="projetos-grid">
+                <div class="projeto-card" data-url="https://github.com/seuusuario/projeto1">
+                    <img src="https://picsum.photos/100/100" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                </div>
+                <div class="projeto-card" data-url="https://github.com/seuusuario/projeto2">
+                    <img src="https://picsum.photos/100/100" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                </div>
+                <div class="projeto-card" data-url="https://github.com/seuusuario/projeto3">
+                    <img src="https://picsum.photos/100/100" alt="Projeto 3">
+                    <h3>Projeto 3</h3>
+                </div>
+                <div class="projeto-card" data-url="https://github.com/seuusuario/projeto4">
+                    <img src="https://picsum.photos/100/100" alt="Projeto 4">
+                    <h3>Projeto 4</h3>
+                </div>
+                <div class="projeto-card" data-url="https://github.com/seuusuario/projeto5">
+                    <img src="https://picsum.photos/100/100" alt="Projeto 5">
+                    <h3>Projeto 5</h3>
+                </div>
+                <div class="projeto-card" data-url="https://github.com/seuusuario/projeto6">
+                    <img src="https://picsum.photos/100/100" alt="Projeto 6">
+                    <h3>Projeto 6</h3>
+                </div>
+            </div>
+        </div> 
+    </section>
+    
+    <section id="JornadaAcademica">
+        <div class="JornadaAcademica">
+            <div class="jornada-intro">
+                <img src="caminho-da-imagem-ucs.jpg" alt="Campus da UCS">
+                <h2>ESTOU CURSANDO O QUARTO SEMESTRE DE ANÁLISE E DESENVOLVIMENTO DE SISTEMAS NA UCS</h2>
+            </div>
+            <div class="livro-container">
+                <div class="livro">
+                    <div class="pagina pagina-esquerda">
+                        <div class="conteudo">
+                            <h3>Título 1</h3>
+                            <p>Descrição do conteúdo 1.</p>
+                            <img src="https://picsum.photos/500/350" alt="Imagem 1">
+                        </div>
+                    </div>
+                    <div class="pagina pagina-direita">
+                        <div class="conteudo">
+                            <h3>Título 2</h3>
+                            <p>Descrição do conteúdo 2.</p>
+                            <img src="https://picsum.photos/500/350" alt="Imagem 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="controles">
+                    <span class="icone-mouse">🖱️</span>
+                    <span class="icone-setas">⬅️ ➡️</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id = "JornadaProfissional">
+        <div class="JornadaProfissional">
+            <div class="cardjp" id="card1">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 1</p>
+            </div>
+            <div class="cardjp hidden" id="card2">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 2</p>
+            </div>
+            <div class="cardjp hidden" id="card3">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 3</p>
+            </div>
+            <div class="cardjp hidden" id="card4">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 4</p>
+            </div>
+            <div class="cardjp hidden" id="card5">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 5</p>
+            </div>
+            <div class="cardjp hidden" id="card6">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 6</p>
+            </div>
+            <div class="cardjp hidden" id="card7">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 7</p>
+            </div>
+            <div class="cardjp hidden" id="card8">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 8</p>
+            </div>
+            <div class="cardjp hidden" id="card9">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 9</p>
+            </div>
+            <div class="cardjp hidden" id="card10">
+                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
+                <p>Lorem Ipsum 10</p>
+            </div>
+        </div> 
+    </section>
+
+    
+    <section id="Contato">
+        <div class="Contato">
+            <div id = "opcoes_contato">
+            <h2>Contato</h2>
+            
+            <div class="contato-item">
+                <span>Email:</span>
+                <a href="mailto:seuemail@gmail.com" target="_blank">seuemail@gmail.com</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=seuemail@gmail.com" target="_blank" class="contato-btn">
+                    <img src="gmail-icon.png" alt="Gmail">
+                </a>
+            </div>
+    
+            <div class="contato-item">
+                <span>LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">linkedin.com/in/seu-perfil</a>
+                <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" class="contato-btn">
+                    <img src="linkedin-icon.png" alt="LinkedIn">
+                </a>
+            </div>
+    
+            <div class="contato-item">
+                <span>WhatsApp:</span>
+                <a href="https://wa.me/55054996571133" target="_blank">+55 54 99657-1133</a>
+                <a href="https://wa.me/55054996571133" target="_blank" class="contato-btn">
+                    <img src="whatsapp-icon.png" alt="WhatsApp">
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <footer>     
+        <button id = "botao_tela_inicial" type="button" onclick="">Home</button>      
+        <div id = "rodapé">
+        <div><p>Portfolio desenvolvido por Franco Michelon, 02/2025</p></div>
+        <div><p>Entre em contato:</p></div>
+        <div><a href="https://wa.me/55054996571133"></a><img src="assets/wp-favicon-64x64.ico" alt="Whatsapp"></div>
+        </div>
+    </footer>
+
+</body>
+</html>

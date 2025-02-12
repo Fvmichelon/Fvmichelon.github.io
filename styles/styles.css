@@ -1,0 +1,458 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #003366, #a5ccf3);
+    display: grid;
+    grid-template-columns: repeat (10, auto); 
+    grid-template-rows: auto;
+}
+
+header, footer {
+    width: 100vw; 
+}
+
+header {   
+    height: 100px;
+    margin-top: 0;   
+    display: grid;
+    grid-template-columns: 300px 1fr; 
+    align-items: center;
+    justify-items: start;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+}
+
+#titulo{
+    display: inline-block;
+    text-align: center;   
+    margin-left: 50px; 
+    padding-left: 10px;
+    padding-right: 10px;   
+    color: white;    
+    border-radius: 30px;
+    font-size: 30;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%; 
+}
+
+nav button {
+    font-size: 18px;
+    color: white;
+    width: auto;
+    height: 50px;
+    background-color: rgba(163, 220, 253, 0.1); 
+    border: none; 
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+nav button:hover {
+    background-color: darkblue; 
+    border-color: darkblue;    
+}
+
+footer{    
+    height: 50px;
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    position: sticky;
+    bottom: 0;
+    background-color: rgba(163, 220, 253, 0.1);
+    font-size: 18px;
+    color: white;
+    font-size: 18px;
+    margin-top: auto;
+}
+
+footer #rodapé{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;       
+}
+
+
+/*Botão Home*/
+
+#botao_tela_inicial {
+    width: 130px;    
+    height: auto;    
+    font-size: 25px;
+    background-color: rgba(163, 220, 253, 0.1);
+    color: white;
+    border: none;
+    border-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    text-align: center;      
+    display: flex;           
+    justify-content: center; 
+    align-items: center;   
+    cursor: pointer;       
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+#botao_tela_inicial:hover {
+    background-color: darkblue; 
+    border-color: darkblue;    
+}
+
+
+/*Tela e animação de abertura do portfolio*/
+
+#Abertura{
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+
+}
+
+#texto-abertura {
+    opacity: 0;
+    animation: fadeIn 5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Seção Sobre*/
+.Sobre {
+    display: flex;
+    align-items: center;
+    max-width: 80vw;
+    gap: 20px;
+}
+
+.Sobre #apresentacao{
+
+    display:grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: auto;
+}  
+
+.foto {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+ 
+}
+
+.texto {
+    max-width: 80%;
+}
+
+.texto h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.texto p1 {
+    font-size: 25px;
+    line-height: 1.5;
+
+}
+
+.texto p2 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+
+/*Apagar ao terminar o desenvolvimento*/
+.testeconteudo{
+    display: flex;
+    align-self: center;
+    width: 100vh;
+    height: 100vh;
+    background-color: black;
+    margin: 20px;
+
+}
+
+
+/*Seção Jornada Profissional*/
+.JornadaProfissional {
+    width: 900px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.cardjp {
+    width: 800px;
+    height: 500px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: opacity 0.5s;
+}
+.hidden {
+    opacity: 0;
+}
+
+img {
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+
+/*Seção Interesses*/
+.Interesses {
+    width: 900px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.carossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 80vw;
+    height: 60vh;
+    position: relative;
+}
+.card {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s, opacity 0.5s;
+}
+.card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/*Seção Contato*/
+
+
+.Contato #opcoes_contato{
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: auto;
+    font-size: 30px;
+    width: 80vw;
+}
+
+.Contato #opcoes_contato h2{
+    color: white;
+}
+
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.contato-item:last-child {
+    border-bottom: none;
+}
+
+.contato-item span {
+    font-weight: bold;
+}
+
+.contato-item a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.contato-item a:hover {
+    text-decoration: underline;
+}
+
+.contato-btn img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.contato-btn img:hover {
+    transform: scale(1.2);
+}
+
+
+
+/*Seção Projetos*/
+.projetos-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px; 
+    justify-items: center;
+    align-items: center;
+}
+
+.projeto-card {
+    background-color: rgba(255, 255, 255, 0.2);;
+    padding: 15px;
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.projeto-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.projeto-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+/*Seção Jornada Acadêmica (deu tudo errado, ARRUMAR)*/
+
+.jornada-intro {
+    position: relative;
+}
+
+.jornada-intro img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.jornada-intro h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.livro-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.livro {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.pagina {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.conteudo img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.controles {
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    gap: 15px;
+}
+
+.icone-mouse, .icone-setas {
+    font-size: 24px;
+    animation: piscar 1s infinite alternate;
+}
+
+@keyframes piscar {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+}
+
+
+
+
+
