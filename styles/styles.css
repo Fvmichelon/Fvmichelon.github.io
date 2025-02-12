@@ -5,6 +5,7 @@ body {
     display: grid;
     grid-template-columns: repeat (10, auto); 
     grid-template-rows: auto;
+    overflow: hidden;   
 }
 
 header, footer {
@@ -189,7 +190,7 @@ footer #rodapé{
 .JornadaProfissional {
     width: 900px;
     height: 600px;
-    background: rgba(255, 255, 255, 0.2);
+    background-image: url('assets/jornada_profissional/jornada_profissional_2.png');
     border-radius: 10px;
     align-self: center;
     display: flex;
@@ -273,6 +274,7 @@ img {
     grid-template-columns: auto;
     font-size: 30px;
     width: 80vw;
+    color:white;
 }
 
 .Contato #opcoes_contato h2{

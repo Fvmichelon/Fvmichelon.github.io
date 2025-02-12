@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esfera Girando</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: linear-gradient(135deg, #00008b, #add8e6); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            overflow: hidden;
+        }
+        canvas { display: block; }
+        .label {
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const geometry = new THREE.SphereGeometry(2, 32, 32);
+        const material = new THREE.MeshBasicMaterial({ color: 0x0077ff, wireframe: true });
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        camera.position.z = 5;
+
+        const labels = [
+            { text: 'Sobre', url: '#sobre' },
+            { text: 'Interesses', url: '#interesses' },
+            { text: 'Jornada Profissional', url: '#jornada-profissional' },
+            { text: 'Jornada Acadêmica', url: '#jornada-academica' },
+            { text: 'Projetos', url: '#projetos' },
+            { text: 'Contato', url: '#contato' }
+        ];
+
+        labels.forEach((label, index) => {
+            const div = document.createElement('div');
+            div.className = 'label';
+            div.innerText = label.text;
+            div.onclick = () => window.location.href = label.url;
+            document.body.appendChild(div);
+            label.element = div;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            sphere.rotation.y += 0.01;
+
+            const time = Date.now() * 0.001;
+            labels.forEach((label, index) => {
+                const angle = time + index * (Math.PI * 2 / labels.length);
+                const x = Math.sin(angle) * 3;
+                const y = Math.cos(angle) * 3;
+                const vector = new THREE.Vector3(x, y, 0).project(camera);
+                const halfWidth = window.innerWidth / 2;
+                const halfHeight = window.innerHeight / 2;
+                label.element.style.left = `${vector.x * halfWidth + halfWidth}px`;
+                label.element.style.top = `${-vector.y * halfHeight + halfHeight}px`;
+            });
+
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+</body>
+</html>
