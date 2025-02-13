@@ -52,20 +52,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("botao-interesses").addEventListener("click", function() {        
 
         const cardsData = [
-            { title: "Card 1", text: "Lorem ipsum dolor sit amet.", img: "https://picsum.photos/300/200?random=1" },
-            { title: "Card 2", text: "Consectetur adipiscing elit.", img: "https://picsum.photos/300/200?random=2" },
-            { title: "Card 3", text: "Sed do eiusmod tempor.", img: "https://picsum.photos/300/200?random=3" },
-            { title: "Card 4", text: "Incididunt ut labore et dolore.", img: "https://picsum.photos/300/200?random=4" },
-            { title: "Card 5", text: "Magna aliqua.", img: "https://picsum.photos/300/200?random=5" },
-            { title: "Card 5", text: "Magna aliqua.", img: "https://picsum.photos/300/200?random=5" },
-            { title: "Card 5", text: "Magna aliqua.", img: "https://picsum.photos/300/200?random=5" },
-            { title: "Card 5", text: "Magna aliqua.", img: "https://picsum.photos/300/200?random=5" },
-            { title: "Card 5", text: "Magna aliqua.", img: "https://picsum.photos/300/200?random=5" },
-            { title: "Card 5", text: "Magna aliqua.", img: "https://picsum.photos/300/200?random=5" }
+            { title: "Card 1", text: "Marcenaria", img: "assets/interesses/marcenaria" },
+            { title: "Card 2", text: "Ciclismo", img: "assets/interesses/ciclismo.png" },
+            { title: "Card 3", text: "Segurança da Informação", img: "assets/interesses/cyber_security.png" },
+            { title: "Card 4", text: "Redes de Computadores", img: "assets/interesses/redes.png" },
+            { title: "Card 5", text: "Desenvolvimento Desktop", img: "assets/interesses/dev_desktop.png" },
+            { title: "Card 6", text: "Desenvolvimento Web", img: "assets/interesses/dev_web.png" },
+            { title: "Card 7", text: "Estudar temas diversos", img: "assets/interesses/estudar.png" },
+            { title: "Card 8", text: "Viajar", img: "assets/interesses/viajar.png" },
+            { title: "Card 9", text: "Musculação", img: "assets/interesses/musculação.png" },
+            { title: "Card 10", text: "Jogos", img: "assets/interesses/jogos.png" },
+            { title: "Card 11", text: "Filmes e Séries", img: "assets/interesses/filmes_series.png" }
         ];
         
         const carossel = document.getElementById("carousel");
-        let interessesCurrentIndex = 2;
+        let interessesCurrentIndex = 5;
         
         function renderCards() {
             carossel.innerHTML = "";
