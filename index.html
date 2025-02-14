@@ -9,22 +9,21 @@
 </head>
 
 <body>
-    <header>
-        <div id = "titulo">
-            <h1>Portfólio</h1> 
-        </div>        
+    <header>        
+            <h1>Portfólio</h1>               
             <nav class = "navbar">
-                <button id = "botao-sobre" type= "button"onclick="mostrarSecao ('#Sobre')">Sobre</button>
-                <button id = "botao-interesses" type="button"onclick="mostrarSecao ('#Interesses')">Interesses</button>
-                <button id = "botao-projetos" type="button"onclick="mostrarSecao ('#Projetos')">Projetos</button>
-                <button id = "botao-jornadaAcademica" type="button"onclick="mostrarSecao ('#JornadaAcademica')">JornadaAcademica</button>
-                <button id = "botao-jornadaProfissional" type="button"onclick="mostrarSecao ('#JornadaProfissional')">JornadaProfissional</button>
-                <button id = "botao-contato" type="button"onclick= "mostrarSecao ('#Contato')">Contato</button>
-            </nav>         
-       
+                <button class = "header-option" id = "botao-sobre" type= "button"onclick="mostrarSecao ('#Sobre')">Sobre</button>
+                <button class = "header-option" id = "botao-interesses" type="button"onclick="mostrarSecao ('#Interesses')">Interesses</button>
+                <button class = "header-option" id = "botao-projetos" type="button"onclick="mostrarSecao ('#Projetos')">Projetos</button>
+                <button class = "header-option" id = "botao-jornadaAcademica" type="button"onclick="mostrarSecao ('#JornadaAcademica')">JornadaAcademica</button>
+                <button class = "header-option" id = "botao-jornadaProfissional" type="button"onclick="mostrarSecao ('#JornadaProfissional')">JornadaProfissional</button>
+                <button class = "header-option" id = "botao-contato" type="button"onclick= "mostrarSecao ('#Contato')">Contato</button>
+            </nav>      
     </header>
    
     
+    <div class = "telas">
+
     <section id = "Abertura">
         <div id = "texto-abertura"><h1>FRANCO PORTFÓLIO</h1></div>      
     </section>
@@ -49,122 +48,189 @@
         </section>
       
 
-
+    <!--Arrumar problema que faz imagens nao aparecerem-->
     <section id="Interesses">
         <div class = "Interesses">
             <div class="carossel" id="carousel"></div>            
         </div>  
     </section>
 
-
+    <!--Arrumar problema que faz imagens nao aparecerem-->
     <section id="Projetos">
         <div class="Projetos">
             <h2>Meus Projetos</h2>
             <div class="projetos-grid">
                 <div class="projeto-card" data-url="https://github.com/seuusuario/projeto1">
-                    <img src="https://picsum.photos/100/100" alt="Projeto 1">
                     <h3>Projeto 1</h3>
+                    <img src="under_construction_1.jpg" alt="Projeto 1">
                 </div>
                 <div class="projeto-card" data-url="https://github.com/seuusuario/projeto2">
-                    <img src="https://picsum.photos/100/100" alt="Projeto 2">
                     <h3>Projeto 2</h3>
+                    <img src="under_construction_2.jpg" alt="Projeto 2">
                 </div>
                 <div class="projeto-card" data-url="https://github.com/seuusuario/projeto3">
-                    <img src="https://picsum.photos/100/100" alt="Projeto 3">
                     <h3>Projeto 3</h3>
+                    <img src="under_construction_3.jpg" alt="Projeto 3">
                 </div>
                 <div class="projeto-card" data-url="https://github.com/seuusuario/projeto4">
-                    <img src="https://picsum.photos/100/100" alt="Projeto 4">
                     <h3>Projeto 4</h3>
+                    <img src="under_construction_3.jpg" alt="Projeto 4">
                 </div>
                 <div class="projeto-card" data-url="https://github.com/seuusuario/projeto5">
-                    <img src="https://picsum.photos/100/100" alt="Projeto 5">
                     <h3>Projeto 5</h3>
+                    <img src="under_construction_2.jpg" alt="Projeto 5">
                 </div>
                 <div class="projeto-card" data-url="https://github.com/seuusuario/projeto6">
-                    <img src="https://picsum.photos/100/100" alt="Projeto 6">
                     <h3>Projeto 6</h3>
+                    <img src="under_construction_1.jpg" alt="Projeto 6">
                 </div>
             </div>
         </div> 
     </section>
     
-    <section id="JornadaAcademica">
-        <div class="JornadaAcademica">
-            <div class="jornada-intro">
-                <img src="caminho-da-imagem-ucs.jpg" alt="Campus da UCS">
-                <h2>ESTOU CURSANDO O QUARTO SEMESTRE DE ANÁLISE E DESENVOLVIMENTO DE SISTEMAS NA UCS</h2>
-            </div>
-            <div class="livro-container">
-                <div class="livro">
-                    <div class="pagina pagina-esquerda">
-                        <div class="conteudo">
-                            <h3>Título 1</h3>
-                            <p>Descrição do conteúdo 1.</p>
-                            <img src="https://picsum.photos/500/350" alt="Imagem 1">
-                        </div>
-                    </div>
-                    <div class="pagina pagina-direita">
-                        <div class="conteudo">
-                            <h3>Título 2</h3>
-                            <p>Descrição do conteúdo 2.</p>
-                            <img src="https://picsum.photos/500/350" alt="Imagem 2">
-                        </div>
-                    </div>
-                </div>
-                <div class="controles">
-                    <span class="icone-mouse">🖱️</span>
-                    <span class="icone-setas">⬅️ ➡️</span>
-                </div>
-            </div>
+    <section id = "JornadaAcademica">
+        <div class="disciplina">
+            <p class="titulo-materia">Fundamentos de engenharia de software</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Introdução à engenharia de software</li>
+                    <li>Modelos de desenvolvimento</li>
+                    <li>Requisitos de software</li>
+                    <li>Testes de software</li>
+                    <li>Manutenção e evolução</li>
+                </ul>
+            </p>
+        </div>
+        <div class="disciplina">
+            <p class="titulo-materia">Fundamentos de sistemas operacionais</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Arquitetura de sistemas operacionais</li>
+                    <li>Gerenciamento de processos</li>
+                    <li>Gerenciamento de memória</li>
+                    <li>Sistemas de arquivos</li>
+                    <li>Segurança e proteção</li>
+                </ul>
+            </p>
+        </div>
+        <div class="disciplina">
+            <p class="titulo-materia">Fundamentos de redes de computadores</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Modelos de redes</li>
+                    <li>Protocolos de comunicação</li>
+                    <li>Redes TCP/IP</li>
+                    <li>Segurança em redes</li>
+                    <li>Infraestrutura e topologia</li>
+                </ul>
+            </p>
+        </div>
+        <div class="disciplina">
+            <p class="titulo-materia">Fundamentos de banco de dados</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Modelagem de dados</li>
+                    <li>SQL e consultas</li>
+                    <li>Normalização</li>
+                    <li>Banco de dados NoSQL</li>
+                    <li>Segurança de dados</li>
+                </ul>
+            </p>
+        </div>
+        <div class="disciplina">
+            <p class="titulo-materia">Organização e arquitetura de computadores</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Componentes do computador</li>
+                    <li>Memória e armazenamento</li>
+                    <li>Processadores e desempenho</li>
+                    <li>Arquiteturas modernas</li>
+                    <li>Sistemas embarcados</li>
+                </ul>
+            </p>
+        </div>
+        <div class="disciplina">
+            <p class="titulo-materia">Algoritmos e estruturas de dados</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Estruturas básicas de dados</li>
+                    <li>Algoritmos de busca e ordenação</li>
+                    <li>Recursão</li>
+                    <li>Grafos e árvores</li>
+                    <li>Complexidade de algoritmos</li>
+                </ul>
+            </p>
+        </div>
+        <div class="disciplina">
+            <p class="titulo-materia">Programação (procedural, orientada a objetos, web)</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Paradigmas de programação</li>
+                    <li>Estruturas de controle</li>
+                    <li>Orientação a objetos</li>
+                    <li>Desenvolvimento web</li>
+                    <li>Frameworks e bibliotecas</li>
+                </ul>
+            </p>
+        </div>
+        <div class="disciplina">
+            <p class="titulo-materia">Interfaces</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Princípios de design de interface</li>
+                    <li>Usabilidade e acessibilidade</li>
+                    <li>Prototipação</li>
+                    <li>Experiência do usuário (UX)</li>
+                    <li>Interação homem-máquina</li>
+                </ul>
+            </p>
+        </div>
+        <div class="disciplina">
+            <p class="titulo-materia">Projeto temático</p>
+            <p class="resumo-materia">
+                <ul>
+                    <li>Desenvolvimento de soluções práticas</li>
+                    <li>Trabalho em equipe</li>
+                    <li>Metodologia ágil</li>
+                    <li>Prototipação e testes</li>
+                    <li>Apresentação de projetos</li>
+                </ul>
+            </p>
         </div>
     </section>
     
     
     
-    <section id = "JornadaProfissional">
+    <section id="JornadaProfissional">
         <div class="JornadaProfissional">
             <div class="cardjp" id="card1">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 1</p>
+                <p>Sempre tive interesses variados, então, ao longo da vida, tive diversas vontades e ideias em relação a qual carreira ou profissão iria escolher.</p>
             </div>
             <div class="cardjp hidden" id="card2">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 2</p>
+                <p>Meus principais interesses sempre foram em áreas técnicas e de tecnologia. Áreas de atuação como instalações elétricas, manutenção de eletrônicos ou máquinas, engenharias, desenvolvimento de produtos, desenho CAD 3D, projetos, contabilidade, análise de dados, programação, administração de sistemas…</p>
             </div>
             <div class="cardjp hidden" id="card3">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 3</p>
+                <p>Como interesse pessoal, comecei a estudar e praticar desenho CAD 3D. Por um tempo, foi apenas um hobby, até o momento em que tive a oportunidade de trabalhar na área.</p>
             </div>
             <div class="cardjp hidden" id="card4">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 4</p>
+                <p>Inicialmente, foi desafiador, pois eu possuía apenas conhecimento teórico e um pouco de prática, sem muito treinamento formal, a não ser pelo ensino médio técnico em mecânica.</p>
             </div>
             <div class="cardjp hidden" id="card5">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 5</p>
+                <p>Mas, ao tornar isso parte do meu dia a dia e praticar bastante, não demorei para desenvolver minhas habilidades e adquirir bastante conhecimento sobre desenho e desenvolvimento de produtos.</p>
             </div>
             <div class="cardjp hidden" id="card6">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 6</p>
+                <p>Com o passar do tempo, recebi mais funções e responsabilidades a desempenhar. Comecei a fazer parte do projeto e desenvolvimento de moldes de injeção plástica, estampos e corte. Além disso, auxiliei na criação e melhoria de processos de produção. Também assumi a responsabilidade de criar a programação CNC para os centros de usinagem.</p>
             </div>
             <div class="cardjp hidden" id="card7">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 7</p>
+                <p>Após um período nesse trabalho como projetista, comecei o curso de Análise e Desenvolvimento de Sistemas. Inicialmente, minha intenção era ter uma sólida base de conhecimento em uma área diferente da que trabalho, para o caso de algum dia desejar mudar de carreira. Escolhi o curso de ADS pois, dentre as diversas opções oferecidas pela universidade, a área de TI e programação era a que mais me despertava interesse. E, claro, eu sabia que era uma área possivelmente muito bem remunerada.</p>
             </div>
             <div class="cardjp hidden" id="card8">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 8</p>
+                <p>Ao longo do curso, meu interesse pela área de TI e desenvolvimento foi superando e substituindo o que possuo na minha função atual como projetista.</p>
             </div>
             <div class="cardjp hidden" id="card9">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 9</p>
+                <p>Em 2024, tomei a decisão final de que faria essa transição de carreira e iniciaria uma nova jornada na minha área de formação. Desde então, venho procurando uma oportunidade, focando em desenvolvimento de software, mas também disposto a trabalhar com bancos de dados, redes e infraestrutura, administração de sistemas, análise de dados…</p>
             </div>
-            <div class="cardjp hidden" id="card10">
-                <img src="https://picsum.photos/800/350" alt="Imagem Aleatória">
-                <p>Lorem Ipsum 10</p>
-            </div>
-        </div> 
+        </div>
     </section>
 
     
@@ -199,18 +265,17 @@
             </div>
         </div>
     </section>
+    </div>
     
     
 
     <footer>     
-        <button id = "botao_tela_inicial" type="button" onclick="">Home</button>      
-        <div id = "rodapé">
-        <div><p>Portfolio desenvolvido por Franco Michelon, 02/2025</p></div>
-        <div><p>Entre em contato:</p></div>
-        <div><a href="https://wa.me/55054996571133" target="_blank">
+        <button class = "botao-home" id = "botao_tela_inicial" type="button" onclick="">Home</button>
+        <div class = "footer-item"><p>Portfólio desenvolvido por Franco Michelon</p></div>
+        <div class = "footer-item"><p>Entre em contato:</p></div>
+        <div class = "footer-item"><a href="https://wa.me/55054996571133" target="_blank">
             <img src="assets\icons\icon_Whatsapp.ico" alt="WhatsApp">
         </a>
-        </div>
         </div>
     </footer>
 

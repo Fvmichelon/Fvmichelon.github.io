@@ -52,17 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("botao-interesses").addEventListener("click", function() {        
 
         const cardsData = [
-            { title: "Card 1", text: "Marcenaria", img: "assets/interesses/marcenaria" },
-            { title: "Card 2", text: "Ciclismo", img: "assets/interesses/ciclismo.png" },
-            { title: "Card 3", text: "Segurança da Informação", img: "assets/interesses/cyber_security.png" },
-            { title: "Card 4", text: "Redes de Computadores", img: "assets/interesses/redes.png" },
-            { title: "Card 5", text: "Desenvolvimento Desktop", img: "assets/interesses/dev_desktop.png" },
-            { title: "Card 6", text: "Desenvolvimento Web", img: "assets/interesses/dev_web.png" },
-            { title: "Card 7", text: "Estudar temas diversos", img: "assets/interesses/estudar.png" },
-            { title: "Card 8", text: "Viajar", img: "assets/interesses/viajar.png" },
-            { title: "Card 9", text: "Musculação", img: "assets/interesses/musculação.png" },
-            { title: "Card 10", text: "Jogos", img: "assets/interesses/jogos.png" },
-            { title: "Card 11", text: "Filmes e Séries", img: "assets/interesses/filmes_series.png" }
+            { title: "Marcenaria",img: "assets/interesses/marcenaria" },
+            { title: "Ciclismo",img: "assets/interesses/ciclismo.png" },
+            { title: "Segurança da Informação",img: "assets/interesses/cyber_security.png" },
+            { title: "Redes de Computadores", img: "assets/interesses/redes.png" },
+            { title: "Desenvolvimento Desktop",  img: "assets/interesses/dev_desktop.png" },
+            { title: "Desenvolvimento Web",  img: "assets/interesses/dev_web.png" },
+            { title: "Estudar temas diversos", img: "assets/interesses/estudar.png" },
+            { title: "Viajar",  img: "assets/interesses/viajar.png" },
+            { title: "Musculação",  img: "assets/interesses/musculação.png" },
+            { title: "Jogos",  img: "assets/interesses/jogos.png" },
+            { title: "Filmes e Séries", img: "assets/interesses/filmes_series.png" }
         ];
         
         const carossel = document.getElementById("carousel");
@@ -75,8 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 cardElement.classList.add("card");
                 cardElement.innerHTML = `
                     <h2>${card.title}</h2>
-                    <img src="${card.img}" alt="${card.title}">
-                    <p>${card.text}</p>
+                    <img src="${card.img}" alt="${card.title}">                    
                 `;
                 
                 const distance = Math.abs(interessesCurrentIndex - index);
@@ -143,10 +142,10 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             card.style.opacity = "1";
             card.style.transform = "translateX(0)";
-        }, index * 300); // Atraso progressivo para cada card
+        }, index * 300);
     });
 
-    // Tornar os cards clicáveis
+    
     cards.forEach(card => {
         card.addEventListener("click", () => {
             window.open(card.getAttribute("data-url"), "_blank");
@@ -158,43 +157,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//Jornada profissional  (arrumar pois nao está funcionando corretamente) :
-//Se der tempo, adicionar mais funcionalidades
+//Jornada profissional:
 
 document.addEventListener("DOMContentLoaded", function () {    
-
-    document.getElementById("botao-jornadaAcademica").addEventListener("click", function() {
-
+    document.getElementById("botao-jornadaProfissional").addEventListener("click", function() {
         let currentIndex = 0;
-            const cards = document.querySelectorAll(".cardjp");
-            function showCard(index) {
-                cards.forEach((card, i) => {
-                    card.classList.toggle("hidden", i !== index);
-                });
-            }
-            function nextCard() {
-                currentIndex = (currentIndex + 1) % cards.length;
-                showCard(currentIndex);
-            }
-            function prevCard() {
-                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-                showCard(currentIndex);
-            }
-            setInterval(nextCard, 2000);
-            document.addEventListener("keydown", (event) => {
-                if (event.key === "ArrowRight") nextCard();
-                if (event.key === "ArrowLeft") prevCard();
+        const cards = document.querySelectorAll(".cardjp");
+
+        function showCard(index) {
+            cards.forEach((card, i) => {
+                card.classList.toggle("hidden", i !== index);
             });
+        }
 
+        function nextCard() {
+            currentIndex = (currentIndex + 1) % cards.length;
+            showCard(currentIndex);
+        }
+
+        function prevCard() {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            showCard(currentIndex);
+        }
+
+        setInterval(nextCard, 7000);
+        
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowRight") nextCard();
+            if (event.key === "ArrowLeft") prevCard();
+        });
     });  
-
 });
 
 
 
-//Jornada acadêmica:
+//Jornada acadêmica (precisa ser arrumado, nao está mostrando todo o conteúdo):
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const disciplinas = document.querySelectorAll(".disciplina");
+
+    function handleScroll() {
+        disciplinas.forEach(disciplina => {
+            const rect = disciplina.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.85) { 
+                disciplina.classList.add("show");
+            }
+        });
+    }
+
+    
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll); 
+    handleScroll(); 
+});
 
 
 

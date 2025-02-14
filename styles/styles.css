@@ -4,133 +4,136 @@
     font-family: "Nunito", sans-serif;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(135deg, #003366, #a5ccf3);
-    overflow: hidden;   
+* {
+    box-sizing: border-box;
+}
+
+body {    
+    height: 100dvh;
+    width: 100dvw;         
     margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #003366, #a5ccf3); 
 }
 
-header, footer {
-    width: 100%; 
-}
-
-header {   
-    height: 100px;
-    margin-top: 0;   
-    display: grid;
-    grid-template-columns: 300px 1fr; 
-    align-items: center;
-    justify-items: start;
-    gap: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-#titulo{
-    display: inline-block;
-    text-align: center;   
-    margin-left: 50px; 
-    padding-left: 10px;
-    padding-right: 10px;   
-    color: white;    
-    border-radius: 30px;
-    font-size: 30px;
-}
-
-header nav {
+header {      
+    max-width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100%; 
+    flex-wrap: wrap;    
+    position: sticky;
+    top: 0;
 }
 
-nav button {
+header h1{
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    
+}
+
+header .navbar {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-around;
+    gap: 20px;
+    flex-grow: 4;    
+    flex-wrap: wrap;
+
+}
+
+header nav .header-option {
     font-size: 18px;
     color: white;
     width: auto;
-    height: 50px;
+    padding: 10px;
     background-color: rgba(163, 220, 253, 0.1); 
     border: none; 
     border-radius: 15px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;        
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    padding: 0 1rem;
+    transition: background-color 0.3s, border-color 0.3s;    
 }
 
-nav button:hover {
+header nav .header-option:hover {
     background-color: rgb(26, 87, 162); 
     border-color:  rgb(26, 87, 162);    
 }
 
+/*Arrumar o que faz o resto das telas nao respeitar o espaço do footer. Header funcionando corretamente*/
 footer{    
+    width: 100%;
+    height: auto;
     position: absolute;
-    height: 50px;
-    display: grid;
-    grid-template-columns: 200px 1fr; 
-    align-items: center;
-    justify-items: center;
-    gap: 20px;
     bottom: 0;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;   
+    justify-content: space-around;
+    gap: 20px;    
     background-color: rgba(163, 220, 253, 0.1);
     font-size: 18px;
     color: white;
     font-size: 18px;
-    margin-top: auto;
+    flex-shrink: 0;   
 }
 
-footer #rodapé{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;       
+.footer-item{
+    width: auto;
+    padding: 10px;
+    text-align: center;        
 }
 
-
-/*Botão Home*/
-
-#botao_tela_inicial {
-    width: 130px;    
-    height: auto;    
+.botao-home {
+    padding: 10px;       
     font-size: 23px;
+    flex-shrink: 0;
     background-color: rgba(163, 220, 253, 0.1);
     color: white;
     border: none;
     border-color: rgb(255, 255, 255);
     border-radius: 15px;
-    text-align: center;      
-    display: flex;           
-    justify-content: center; 
-    align-items: center;   
+    text-align: center;  
     cursor: pointer;       
     transition: background-color 0.3s, border-color 0.3s; 
 }
 
-#botao_tela_inicial:hover {
+.botao-home:hover {
     background-color: rgb(26, 87, 162);    
     border-color: rgb(26, 87, 162);     
+}
+
+.telas {         
+    height: 80%;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
 /*Tela e animação de abertura do portfolio*/
 
-#Abertura{
-    justify-content: center;
-    text-align: center;
+#Abertura {        
+    height: 100%;
+    flex-grow: 1;
     font-size: 40px;
     color: white;
-
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
 }
 
 #texto-abertura {
     opacity: 0;
     animation: fadeIn 5s ease-in-out forwards;
+    text-align: center;
 }
 
 @keyframes fadeIn {
@@ -144,6 +147,7 @@ footer #rodapé{
 
 
 /*Seção Sobre*/
+
 .Sobre {
     margin-top: 5rem;
     display: flex;
@@ -192,48 +196,56 @@ footer #rodapé{
 }
 
 
-/*Seção Jornada Profissional*/
+/* Seção Jornada Profissional */
+
 .JornadaProfissional {
+    display: flex;
+    flex-direction: column;    
     width: 80vw;
     height: 70vh;
-    max-width: 900px;
-    background-image: url('assets/jornada_profissional/jornada_profissional_2.png');
+    max-width: 1200px;    
     border-radius: 10px;
     align-self: center;
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    margin: 2rem 0;
+    margin: 2rem auto;
 }
+
 .cardjp {
-    width: 100%;
-    height: 100%;
-    background: white;
+    width: 100%;    
+    height: 100%;    
+    background: rgba(145, 233, 248, 0.1);
     color: black;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: absolute;
+    border-radius: 20px;   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     transition: opacity 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.cardjp p {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+
 .hidden {
     opacity: 0;
 }
 
-img {
-    width: 100%;
-    height: 70%;
-    border-radius: 5px;
-}
-
 
 /*Seção Interesses*/
+
 .Interesses {
     margin-top: 2rem;
     width: auto;
@@ -277,6 +289,7 @@ img {
 
 /*Seção Contato*/
 
+/*Mudar de grid para flexbox, aumentar tamanho dos icons e centralizar na tela*/
 
 .Contato #opcoes_contato{
     margin-top: 5rem;
@@ -291,7 +304,6 @@ img {
 .Contato #opcoes_contato h2{
     color: white;
 }
-
 
 .contato-item {
     display: flex;
@@ -331,24 +343,26 @@ img {
 }
 
 
-
 /*Seção Projetos*/
-.projetos-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
 
 .Projetos {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.Projetos h2 {
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .projetos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px; 
-    row-gap: 25px;
-    justify-items: center;
-    align-items: center;
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .projeto-card {
@@ -359,6 +373,7 @@ img {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    height: 100%;
     width: 100%;
     max-width: 280px;
     text-align: center;
@@ -367,8 +382,8 @@ img {
 }
 
 .projeto-card img {
-    width: 100%;
-    height: 120px;
+    width: auto;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -384,81 +399,46 @@ img {
 }
 
 
+/*Seção Jornada Acadêmica*/
 
-
-/*Seção Jornada Acadêmica (deu tudo errado, ARRUMAR)*/
-
-.jornada-intro {
-    position: relative;
-}
-
-.jornada-intro img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-}
-
-.jornada-intro h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
+.disciplina {
     color: white;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.livro-container {
-    position: relative;
+    width: 100%;
+    height: 50vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
-}
-
-.livro {
-    width: 500px;
-    height: 300px;
-    display: flex;
-    border: 2px solid #333;
-    border-radius: 10px;
-    overflow: hidden;
-    background: white;
-}
-
-.pagina {
-    width: 50%;
+    border-bottom: 1px solid #ddd;
     padding: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.titulo-materia {
+    
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
 }
 
-.conteudo img {
-    max-width: 100%;
-    margin-top: 10px;
-    border-radius: 5px;
+.resumo-materia {    
+    max-width: 80%;
+    text-align: justify;
 }
 
-.controles {
-    position: absolute;
-    bottom: -40px;
-    display: flex;
-    gap: 15px;
+.telas .disciplina.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-.icone-mouse, .icone-setas {
-    font-size: 24px;
-    animation: piscar 1s infinite alternate;
-}
-
-@keyframes piscar {
-    from { opacity: 1; }
-    to { opacity: 0.5; }
-}
 
 
 
 /*Ajustes para ficar responsivo:*/
+
+/*
 
 @media (max-width: 768px) {
 
@@ -581,3 +561,4 @@ img {
     }
 }
 
+*/
