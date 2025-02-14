@@ -2,10 +2,15 @@
 
 * {
     font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
+html {
+    margin: 0;    
+}
+
+.elemento::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari e Edge */
 }
 
 body {    
@@ -345,54 +350,55 @@ footer{
 
 /*Seção Projetos*/
 
-.Projetos {
+.Projetos{
+    min-height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-}
-.Projetos h2 {
-    text-align: center;
-    margin-top: 2rem;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    align-items: center;  
 }
 
-.projetos-grid {
-    display: flex;    
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.projeto-card {
-    background-color: rgba(255, 255, 255, 0.2);;
-    padding: 15px;
-    border: 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    height: 100%;
+.projetos-grid{
+    min-height: 100%;
     width: 100%;
-    max-width: 280px;
-    text-align: center;
-    opacity: 0;
-    transform: translateX(-50px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;    
 }
 
-.projeto-card img {
-    width: auto;
+.projetos-card{
     height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+    max-width: 500px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255, 0.2);
+    border: 5px solid black;
+    border-radius: 50px;
+    margin:30px
 }
 
-.projeto-card h3 {
-    margin-top: 10px;
-    font-size: 18px;
+.projetos-card h1{
+    font-size: 2rem;
+    color: black;
+    background-color: rgb(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 20px;
 }
 
+.projetos-card img{
+    max-height: 80%;
+    max-width: 100%;
+    object-fit:cover;  
+    border-radius: 25px;
+}
+
+.hidden{
+    display: none;
+}
 .projeto-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);

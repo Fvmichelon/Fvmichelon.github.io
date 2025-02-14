@@ -136,13 +136,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("botao-projetos").addEventListener("click", function() {
 
-        const cards = document.querySelectorAll(".projeto-card");
+    const cards = document.querySelectorAll(".projetos-card");
 
-    cards.forEach((card, index) => {
+    cards.forEach((card, index) => {        
         setTimeout(() => {
-            card.style.opacity = "1";
-            card.style.transform = "translateX(0)";
-        }, index * 300);
+            card.classList.remove('hidden');
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, index * 500);
     });
 
     
